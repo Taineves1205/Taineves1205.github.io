@@ -1,38 +1,47 @@
 
-// PROJETOS DO PORTFÓLIO
-
 const projects = [
   {
-    name: "Meu primeiro projeto",
-    description: "Página desenvolvida utilizando HTML e CSS.",
-    technology: "HTML • CSS",
-    icon: "🌸",
-    link: "https://github.com/Taineves1205"
+    name: "Meu Portfólio",
+    description:
+      "Meu espaço profissional para apresentar minhas habilidades, trajetória e projetos.",
+
+    image: "assets/portfolio.png",
+
+    technologies: ["HTML", "CSS", "JavaScript"],
+
+    demo: "https://taineves1205.github.io",
+
+    github: "https://github.com/Taineves1205"
   },
+
   {
-    name: "Projeto JavaScript",
-    description: "Aplicação interativa desenvolvida com JavaScript.",
-    technology: "HTML • CSS • JS",
-    icon: "💻",
-    link: "https://github.com/Taineves1205"
+    name: "Projeto Front-end",
+    description:
+      "Interface web desenvolvida para praticar estruturação e estilização de páginas.",
+
+    image: "assets/projeto2.png",
+
+    technologies: ["HTML", "CSS"],
+
+    demo: "#",
+
+    github: "https://github.com/Taineves1205"
   },
+
   {
-    name: "IA + Front-end",
-    description: "Projeto experimental envolvendo Inteligência Artificial.",
-    technology: "JavaScript • IA",
-    icon: "🤖",
-    link: "https://github.com/Taineves1205"
-  },
-  {
-    name: "Meu portfólio",
-    description: "Meu espaço pessoal para apresentar minha trajetória.",
-    technology: "HTML • CSS • JS",
-    icon: "✨",
-    link: "https://github.com/Taineves1205"
+    name: "Projeto Inteligência Artificial",
+    description:
+      "Experimentos com interfaces e aplicações envolvendo Inteligência Artificial.",
+
+    image: "assets/projeto3.png",
+
+    technologies: ["JavaScript", "IA"],
+
+    demo: "#",
+
+    github: "https://github.com/Taineves1205"
   }
 ];
-
-// EXIBIR PROJETOS NA TELA
 
 const projectList = document.querySelector("#project-list");
 
@@ -42,23 +51,46 @@ function renderProjects() {
 
     <article class="project-card">
 
-      <div class="project-icon">
-        ${project.icon}
+      <div class="project-image">
+        <img
+          src="${project.image}"
+          alt="Imagem do projeto ${project.name}"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
       </div>
 
-      <h4>${project.name}</h4>
+      <div class="project-content">
 
-      <p>${project.description}</p>
+        <h4>${project.name}</h4>
 
-      <small>${project.technology}</small>
+        <p>${project.description}</p>
 
-      <br><br>
+        <div class="technologies">
+          ${project.technologies.map(tech =>
+            `<span>${tech}</span>`
+          ).join("")}
+        </div>
 
-      <a href="${project.link}"
-         target="_blank"
-         rel="noopener noreferrer">
-        Ver projeto →
-      </a>
+        <div class="project-buttons">
+
+          <a href="${project.demo}"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-demo">
+            Ver projeto ↗
+          </a>
+
+          <a href="${project.github}"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-github">
+            Código GitHub
+          </a>
+
+        </div>
+
+      </div>
 
     </article>
 
@@ -67,3 +99,4 @@ function renderProjects() {
 }
 
 renderProjects();
+

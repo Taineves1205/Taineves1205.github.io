@@ -225,3 +225,214 @@ footer {
   }
 
 }
+
+
+/* ÍCONES DAS REDES SOCIAIS */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 25px 0 35px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--pink);
+  color: var(--coffee);
+
+  border: 1px solid rgba(111, 78, 55, 0.15);
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+}
+
+.social-icon svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-icon:hover {
+  background: var(--coffee);
+  color: white;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: var(--shadow);
+}
+
+
+/* SEÇÃO DE PROJETOS PROFISSIONAIS */
+
+.projects {
+  margin: 55px 0 45px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-tag {
+  display: inline-block;
+  color: #A66F80;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.section-heading h3 {
+  color: var(--coffee);
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: #80685C;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* GRADE DOS PROJETOS */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* CARTÃO */
+
+.project-card {
+  overflow: hidden;
+  background: #FFFDFC;
+  border: 1px solid #EAD9D1;
+  border-radius: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(75, 48, 37, 0.14);
+}
+
+/* IMAGEM */
+
+.project-image {
+  height: 175px;
+  overflow: hidden;
+  background: #F4C7D5;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* CONTEÚDO */
+
+.project-content {
+  padding: 19px;
+}
+
+.project-content h4 {
+  color: var(--coffee);
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  color: #80685C;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 65px;
+  margin-bottom: 15px;
+}
+
+/* TECNOLOGIAS */
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.technologies span {
+  background: #F5E4E9;
+  color: var(--coffee);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* BOTÕES */
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-buttons a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 11px 8px;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+
+.btn-demo {
+  background: var(--coffee);
+  color: white;
+}
+
+.btn-github {
+  background: var(--pink);
+  color: var(--coffee-dark);
+}
+
+.project-buttons a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* CELULAR */
+
+@media (max-width: 560px) {
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .section-heading h3 {
+    font-size: 23px;
+  }
+
+}
